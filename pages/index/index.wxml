@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="logo">Unsplash</view>
+    <view class="desc">
+      Made with Unsplash
+    </view>
+  </view>
+  <scroll-view class="imageview" scroll-y="true">
+    <block wx:for="{{ latests }}" wx:for-item="photo" wx:for-index="idx">
+      <modal 
+        title="@{{ user.username }}" 
+        hidden="{{modalHidden}}" 
+        no-cancel 
+        confirm-text="Back"
+        bindconfirm="closeModal"
+        >
+        <view class="profile">
+          <image class="profile-avatar" src="{{ user.profile_image.large }}"></image>
+          <text class="profile-info">{{ user.total_likes }} likes  {{ user.total_photos }} photos</text>
+          <text class="profile-name">{{ user.name }}</text>
+          <text class="profile-bio">{{ user.bio }}</text>
+        </view>
+      </modal>
+      <view class="photo">
+        <image src="{{ photo.urls.regular }}"></image>
+        <view class="user" bindtap="modalTap" data-item="{{ idx }}">{{ photo.user.name }}</view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

@@ -1,0 +1,75 @@
+/**index.wxss**/
+.photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 14rpx;
+}
+
+.imageview {
+  margin-bottom: 200rpx;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 14rpx;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48rpx;
+}
+
+.header .logo {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.header .desc {
+  margin-top: 14rpx;
+  font-size: 18px;
+  line-height: 150%;
+  color: grey;
+}
+
+.profile-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.profile-bio {
+  text-align: center;
+  font-size: 10px;
+  line-height: 150%;
+  color: grey;
+}
+
+.profile-name {
+  text-align: center;
+  font-size: 18px;
+  line-height: 150%;
+  color: black;
+}
+
+.user {
+  font-size: 12rpx;
+  position: relative;
+  top: -100rpx;
+  background: rgba(23,28,51,.5);
+  border-radius: 10rpx;
+  padding: 14rpx 28rpx;
+  color: lightgrey;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.navigator-hover {
+  color: mediumseagreen;
+}
