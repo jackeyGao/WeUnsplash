@@ -2,9 +2,14 @@
 <view class="container">
   <view class="header">
     <view class="logo">Unsplash</view>
-    <view class="desc">
-      Made with Unsplash
-    </view>
+    <div class="menu weui-flex">
+      <div class="item weui-flex__item {{ FeaActived ? 'actived' : '' }}" bindtap="loadFeaList">
+        <div class="placeholder">Featured</div>
+      </div>
+      <div class="item weui-flex__item {{ NewActived ? 'actived' : '' }}" bindtap="loadNewList">
+        <div class="placeholder">New</div>
+      </div>
+    </div>
   </view>
   <scroll-view class="imageview" scroll-y="true">
     <block wx:for="{{ latests }}" wx:for-item="photo" wx:for-index="idx">
@@ -28,4 +33,12 @@
       </view>
     </block>
   </scroll-view>
+  <view class="footer">
+    <view class="desc">
+      Made with Unsplash
+    </view>
+    <view class="me">
+      @JackeyGao
+    </view>
+  </view>
 </view>
