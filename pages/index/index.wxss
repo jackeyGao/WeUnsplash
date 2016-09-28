@@ -99,3 +99,14 @@
 .menu .actived {
   border-bottom: 2px solid orange;
 }
+
+.loadmore {
+  text-align: center;
+  align-items: center;
+  margin-bottom: 62rpx;
+}
+
+.loadmore .loading {
+  font-size: 28rpx;
+  color: lightslategrey;
+}

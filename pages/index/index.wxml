@@ -1,17 +1,17 @@
 <!--index.wxml-->
 <view class="container">
+  <scroll-view class="imageview" style="height: 1000px;" scroll-y="true" bindscrolltolower="loadMore">
   <view class="header">
     <view class="logo">Unsplash</view>
-    <div class="menu weui-flex">
-      <div class="item weui-flex__item {{ FeaActived ? 'actived' : '' }}" bindtap="loadFeaList">
-        <div class="placeholder">Featured</div>
+      <div class="menu weui-flex">
+        <div class="item weui-flex__item {{ FeaActived ? 'actived' : '' }}" bindtap="loadFeaList">
+          <div class="placeholder">Featured</div>
+        </div>
+        <div class="item weui-flex__item {{ NewActived ? 'actived' : '' }}" bindtap="loadNewList">
+          <div class="placeholder">New</div>
+        </div>
       </div>
-      <div class="item weui-flex__item {{ NewActived ? 'actived' : '' }}" bindtap="loadNewList">
-        <div class="placeholder">New</div>
-      </div>
-    </div>
-  </view>
-  <scroll-view class="imageview" scroll-y="true">
+    </view>
     <block wx:for="{{ latests }}" wx:for-item="photo" wx:for-index="idx">
       <modal 
         title="@{{ user.username }}" 
@@ -32,10 +32,16 @@
         <view class="user" bindtap="modalTap" data-item="{{ idx }}">{{ photo.user.name }}</view>
       </view>
     </block>
+    <view class="loadmore">
+      <div class="weui-loadmore">
+        <i class="weui-loading"></i>
+        <span class="weui-loadmore__tips loading">Loading...</span>
+      </div>
+    </view>
   </scroll-view>
   <view class="footer">
     <view class="desc">
-      Made with Unsplash
+      💝Made with Unsplash
     </view>
     <view class="me">
       @JackeyGao
